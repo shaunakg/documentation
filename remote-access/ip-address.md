@@ -36,6 +36,8 @@ PING raspberrypi.local (192.168.1.131): 56 data bytes
 64 bytes from 192.168.1.131: icmp_seq=0 ttl=255 time=2.618 ms
 ```
 
+In some cases, `ping` will show an IPV6 address instead of the usual IPV4, which may not be supported on some SSH clients. To counteract this, add the switch `-4` to the end of your `ping` command.
+
 If you change the system hostname of the Raspberry Pi (e.g., by editing `/etc/hostname`), Avahi will also change the `.local` mDNS address.
 
 If you don't remember the hostname of the Raspberry Pi, but have a system with Avahi installed, you can browse all the hosts and services on the LAN with the [`avahi-browse`](https://linux.die.net/man/1/avahi-browse) command.
